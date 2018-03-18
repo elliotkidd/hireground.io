@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<%= image_tag(@item.image_url) if @item.image.present? %>
+
 <h2>
   <%= @item.title %>
 </h2>
@@ -8,10 +10,7 @@
   <%= simple_format(@item.description) %>
 </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@item.picture_url, width: 600) if @item.picture.present? %>
-</p>
+
 
 <%= link_to 'Edit', edit_item_path(@item), class: 'btn btn-primary btn-sm' %>
 <%= link_to 'Back', items_path, class: 'btn btn-secondary btn-sm' %>
