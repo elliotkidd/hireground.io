@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<h2>
+  <%= @category.name %>
+</h2>
+
+<p>
+  <%= @category.desc %>
+</p>
+
+<h3> Listings in this category </h3>
+<% Item.where(category_id: @category.id).each do |item| %>
+<li> <%= item.title %> </li>
+<% end %>
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

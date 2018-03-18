@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   get 'pages/info'
   get 'pages/home'
 
