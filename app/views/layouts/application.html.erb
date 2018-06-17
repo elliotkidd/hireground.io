@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HiregroundIo</title>
+    <title>Hireground.io</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,8 +12,8 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
-      <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
+      <div class="container-fluid">
         <div class="navbar-header">
           <%= link_to "Hireground", root_url, :class => "navbar-brand" %>
         </div>
@@ -28,6 +28,9 @@
         </ul>
       </div>
     </nav>
+
+
+
 
     <div class="container">
       <%= yield %>

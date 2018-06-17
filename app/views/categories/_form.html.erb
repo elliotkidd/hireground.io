@@ -1,6 +1,6 @@
 <%= form_with(model: category, local: true) do |form| %>
   <% if category.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="alert alert-warning" role="alert">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
 
       <ul>
@@ -10,6 +10,8 @@
       </ul>
     </div>
   <% end %>
+  
+  <%= form.hidden_field :parent_id %>
 
   <div class="form-group">
     <%= form.label :name %>
